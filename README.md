@@ -1,170 +1,167 @@
-# Datapath
+# Datapath — Data Analytics Learning Platform
 
-Learn data analytics one concept at a time. Excel and SQL are complete (178 lessons); Python, Power BI,
-Statistics and Cleaning, EDA and case studies have course content. Interview preparation includes at least 60 standard interview questions each for Excel, SQL, Python and Power BI, at least 30 each for Data Analysis, Statistics, Projects & Resume and HR, 40 separate scenarios and interactive mock tests. Multiple-choice questions are counted separately from the standard-question minimums.
+**Learn data analytics one concept at a time.**
 
-This is a static website: plain HTML, CSS and JavaScript. No framework, no build step, no backend.
+Datapath is a free, interactive learning platform designed to help aspiring data analysts learn practical concepts, practise technical skills, and prepare for interviews.
 
----
+The platform uses plain HTML, CSS, and JavaScript, with individual course files that make it easy to maintain existing lessons and add new learning content.
 
-## 1. Run it locally in VS Code
+## ✨ Features
 
-1. Unzip the project and open the `datapath` folder in VS Code (**File > Open Folder**).
-2. Start a local server, using either option:
-   - **Live Server extension (easiest):** install "Live Server" (Ritwick Dey), then right-click `index.html` and choose **Open with Live Server**.
-   - **Terminal (needs Python):** open **Terminal > New Terminal** in VS Code and run
-     `python -m http.server 8000` (on macOS/Linux you may need `python3`), then browse to <http://localhost:8000>.
-3. Edit a file, save, refresh the browser.
+- **Excel:** Formulas, lookup functions, data cleaning, pivot tables, charts, and dashboards.
+- **SQL:** Queries, filtering, joins, aggregations, subqueries, CTEs, window functions, and more.
+- **Python:** Learn data analysis concepts and practise with examples.
+- **Power BI:** Explore business intelligence and reporting concepts.
+- **Statistics and Data Analysis:** Build an understanding of analytical concepts and practical problem-solving.
+- **Case Studies:** Practise applying analytical skills to business problems.
+- **Interview Preparation:** Technical questions, scenario-based questions, interview answers, and interactive mock tests.
+- **Interactive Learning:** Examples, practice exercises, quizzes, answer feedback, and lesson navigation.
+- **Progress Tracking:** Save lesson completion and quiz scores in your browser.
+- **Light and Dark Themes:** Switch between themes to suit your preference.
+- **Responsive Design:** Use the platform on desktop and mobile devices.
 
-Because the site uses ordinary `<script>` tags (not ES modules), double-clicking `index.html` also works.
-A local server is still recommended, because it behaves like GitHub Pages.
+Excel and SQL contain 178 lessons combined. Other modules contain learning content that can be expanded as development continues.
 
-> Your original single-file site is kept untouched at `backup/Datapath-original.html`.
+## 🚀 Getting Started
 
----
+Datapath is a static website. It does not require a backend, database, framework, or build process.
 
-## 2. Folder structure
+### Option 1: Run with VS Code
+
+1. Download or clone this repository.
+2. Open the `datapath` folder in Visual Studio Code.
+3. Install the **Live Server** extension by Ritwick Dey if it is not already installed.
+4. Right-click `index.html`.
+5. Select **Open with Live Server**.
+
+Your browser will open the website on a local development address.
+
+### Option 2: Run with Python
+
+Open a terminal in the project root and run:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+<http://localhost:8000>
+
+If `python` is not recognized, try `python3 -m http.server 8000` where supported.
+
+## 📁 Project Structure
 
 ```text
 datapath/
-├── index.html                  App shell: top bar, sidebar, main area, and the <script>/<link> tags
+├── index.html
+├── about.html
+├── contact.html
+├── privacy.html
 ├── README.md
-├── .nojekyll                   Tells GitHub Pages to serve files as-is (for later)
+├── .nojekyll
 │
 ├── assets/
 │   ├── css/
-│   │   ├── main.css            Colour tokens (light and dark), reset, base elements, typography
-│   │   ├── layout.css          Top bar, page grid, sidebar container, mobile drawer, page modes, responsive layout
-│   │   └── components.css      Buttons, sidebar items, spreadsheet grid, tables, examples, quiz, pager, cards, landing sections
 │   └── js/
-│       ├── datapath.js         Core namespace (window.Datapath) and the lesson/course registries
-│       ├── builders.js         Helpers lesson files use: withHl, T, X, P, Q, FL, RT, D
-│       ├── utils.js            esc, fmt, li, shuffle, $ and two icons
-│       ├── storage.js          Safe localStorage wrapper (falls back to memory)
-│       ├── progress.js         Completion and best quiz score (key: datapath_progress_v1)
-│       ├── curriculum.js       Builds the module list and the learning ORDER from the course manifests
-│       ├── theme.js            Light/dark switching (key: datapath_theme)
-│       ├── visuals.js          SVG charts, spreadsheet grids, Venn and flow diagrams
-│       ├── search.js           Sidebar lesson search
-│       ├── sidebar.js          Sidebar rendering, expandable modules and sections
-│       ├── lesson.js           Lesson page: merges core + extended content, builds "On this page"
-│       ├── quiz.js             Five-question quiz, feedback, score, retry
-│       ├── navigation.js       Hash routing (#/, #/learn, #/module/<id>, #/lesson/<id>), menu drawer
-│       ├── app.js              Start-up and a content check that reports problems in the browser console
 │       └── pages/
-│           ├── landing.js      Home page
-│           └── modules.js      "Choose what you want to learn" page and single-module page
 │
 ├── courses/
-│   ├── excel/                  13 topic files (84 lessons), manifest and shared sample tables
-│   │   ├── lessons.js          Manifest: sections and the ordered lesson ids (what the sidebar shows)
-│   │   ├── datasets.js         Sample tables shared by Excel lessons (PRODUCTS, SALESLOG, ...)
-│   │   ├── basics.js  math-ranking.js  logical-functions.js  lookup-functions.js  conditional-math.js
-│   │   ├── text-functions.js  date-functions.js  dynamic-arrays.js  data-cleaning.js  tables-names.js
-│   │   └── pivot-tables.js  charts-dashboards.js  power-query-macros.js
-│   ├── sql/                    16 topic files (94 lessons), manifest and shared sample tables
-│   │   ├── lessons.js  datasets.js     (EMP, DEPT, CUST, ORD)
-│   │   ├── foundations.js  select-queries.js  filtering-sorting.js  aggregation.js  string-functions.js
-│   │   ├── numeric-functions.js  date-functions.js  null-case-cast.js  joins.js  set-operations.js
-│   │   └── subqueries.js  ctes.js  window-functions.js  creating-changing-data.js
-│   │       design-performance.js  interview-patterns.js
+│   ├── excel/
+│   ├── sql/
+│   ├── python/
+│   ├── power-bi/
+│   ├── statistics/
 │   ├── foundations/
-│   │   ├── lessons.js          Six introductory lessons on framing, auditing and communicating analysis
-│   │   └── content.js          Core and extended foundation lesson content
-│   ├── python/  power-bi/  statistics/  case-studies/  interview-preparation/
+│   ├── case-studies/
+│   └── interview-preparation/
 │
-├── backup/Datapath-original.html   Your untouched original file
-├── docs/MIGRATION_REPORT.md        What was moved, what changed, what was tested
-└── dev-tools/                      Optional scripts that compare this project to the original (not needed to run the site)
+├── docs/
+└── dev-tools/
 ```
 
-### How a lesson is stored
+### What the main folders contain
 
-Every lesson has two layers, kept together in its topic file so a topic is edited in one place:
+| Path | Purpose |
+|---|---|
+| `index.html` | Main website entry point and script loading |
+| `assets/css/` | Website styles, layout, and components |
+| `assets/js/` | Application logic, navigation, quizzes, progress, and theme settings |
+| `assets/js/pages/` | JavaScript that renders landing and module pages |
+| `courses/` | Course manifests, lesson content, examples, and exercises |
+| `docs/` | Project documentation |
+| `dev-tools/` | Optional scripts for development and content checks |
 
-| Layer | Where it is written | Contains |
-|---|---|---|
-| Core | `DP.addLessons({ 'lesson-id': {...} })` | `title`, `tagline`, `prereq`, `what`, `why`, `syntax`, `compare`, `points`, `mistakes`, `example`, `practice`, `interview`, `mcq` (quiz), `recap` |
-| Extended | `D('lesson-id', {...})` or `DEEP['lesson-id'] = {...}` | `level`, `tldr`, `intuition`, `how`, `diagrams`, `examples`, `edge`, `tiers`, `interviewPlus`, `ref`, `related` |
+## 📚 Adding and Updating Lessons
 
-`lesson.js` loads both layers and merges them. Exercises, answers, hints, interview answers and quizzes stay inside
-the lesson they belong to. The sidebar order and sections come only from `courses/<name>/lessons.js`.
+Course content is organized into separate files to make future development easier.
+
+### Add a lesson to an existing topic
+
+1. Open the appropriate course manifest, such as `courses/sql/lessons.js`.
+2. Add the new lesson ID to the correct section.
+3. Open the corresponding topic file, such as `courses/sql/joins.js`.
+4. Add the lesson content using the existing structure.
+5. Include examples, practice questions, answers, and quiz questions as appropriate.
+6. Run the website locally and verify that the lesson appears correctly.
+
+Keep lesson IDs unique and ensure the manifest ID matches the ID used in the lesson content.
+
+### Add a new topic
+
+1. Create the new topic file inside the appropriate course folder.
+2. Follow the existing lesson structure.
+3. Add a script reference to `index.html` in the correct loading order.
+4. Test the new topic and check the browser console for errors.
+
+For more detailed development instructions, see the documentation in `docs/` and the existing course files.
+
+## 🌐 Deployment
+
+Datapath can be hosted on **GitHub Pages** without a paid hosting service.
+
+To publish the website:
+
+1. Push the project files to a GitHub repository.
+2. Open the repository's **Settings → Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Choose the `main` branch and `/(root)` folder.
+5. Click **Save** and wait for deployment to finish.
+
+For a repository named `datapath`, the published address follows this format:
+
+`https://hussain0308.github.io/datapath/`
+
+The address becomes available after GitHub Pages successfully deploys the site.
+
+## 🔒 Privacy and Storage
+
+Datapath does not require visitor accounts or a backend for its current functionality.
+
+- Lesson progress and theme preferences are stored in the visitor's browser.
+- Browser storage may be cleared by the visitor or by their browser settings.
+- The website loads fonts from Google Fonts.
+- Any future analytics, advertising, or third-party integrations should be documented according to their actual data collection and cookie practices.
+
+Read the [Privacy Policy](privacy.html) for further information.
+
+## 🛠️ Technology Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser `localStorage`
+- Git and GitHub
+- GitHub Pages
+
+No JavaScript framework, application server, or build step is required for the current website.
+
+## 🎯 Project Goal
+
+The goal of Datapath is to provide an accessible place for aspiring data analysts to learn concepts, practise with examples, improve problem-solving skills, and prepare for data analytics interviews.
+
+The platform is being developed incrementally, with course content and features added as they are completed.
 
 ---
 
-## 3. Add a new lesson to an existing topic (Excel or SQL)
-
-Example: a new SQL lesson `right-anti-join` in the Joins topic. You touch **only** these two files:
-
-1. `courses/sql/lessons.js`: add the id to the right section, in the position you want it to appear:
-   `{ title:'Joins', lessons:['inner-join', ..., 'multiple-joins', 'right-anti-join'] }`
-2. `courses/sql/joins.js`:
-   - inside `DP.addLessons({ ... })` add `'right-anti-join': { title:..., tagline:..., what:[...], ... mcq:[...], recap:[...] }`
-     (copy an existing lesson in that file and edit it; the quiz needs 5 questions);
-   - add the extended content below it: `DP.deep['right-anti-join'] = { ... }` (or a `D(...)` call).
-     This part is optional; without it the lesson opens with the basic layout.
-
-Open the site and check the browser console (F12). `app.js` prints a warning if an id is listed but missing,
-duplicated, or incomplete.
-
-To create a **new topic file** inside a course (for example `courses/sql/pivoting.js`): copy a small topic file such as
-`courses/sql/ctes.js`, change the lessons, then add `<script src="courses/sql/pivoting.js"></script>` to `index.html`
-inside the SQL block. The file must load **after** `courses/sql/lessons.js` and `datasets.js`.
-
-Shared sample tables go in the course's `datasets.js`. Add the table, add its name to the export at the bottom,
-then list it in the destructuring line at the top of the topic file that uses it.
-
----
-
-## 4. Add a completely new technology (for example Python)
-
-A placeholder already exists at `courses/python/lessons.js`. To make it real:
-
-1. In `courses/python/lessons.js` fill in `sections:[ { title:'Python basics', lessons:['py-intro', ...] } ]`
-   (keep `id`, `title`, `planned`, `blurb`).
-2. Create topic files in the same folder, for example `courses/python/basics.js`, containing
-   `window.Datapath.addLessons({...})` and the extended content. Copy the shape of a small Excel or SQL topic file.
-   If the course needs sample tables, create `courses/python/datasets.js` that sets `window.Datapath.datasets.python = {...}`.
-3. In `index.html`, add `<script src="courses/python/basics.js"></script>` (and `datasets.js`) right after the
-   `courses/python/lessons.js` line. The order of the course blocks in `index.html` is the order in the sidebar.
-
-For a brand-new technology that has no placeholder (for example `courses/tableau/`):
-create `courses/tableau/lessons.js` calling `window.Datapath.registerCourse({ id:'tableau', title:'Tableau', planned:'...', blurb:'...', sections:[...] })`,
-add its topic files, and add the script tags in the position you want it to appear in the sidebar.
-
-Optional: the home page copy ("Tools and topics you will learn", "What you will be able to do") is plain text in
-`assets/js/pages/landing.js`. Update it when a course goes live; nothing else depends on it.
-
----
-
-## 5. Why it is built this way
-
-- **Kept as a single-page app.** Your site is one page that switches views by URL hash (`#/lesson/vlookup`). That is ideal for
-  GitHub Pages (no server rules needed) and keeps every existing link working, so it was kept. The shell (`index.html`),
-  styles, application code and course content are now separate files.
-- **Plain `<script>` files sharing one object (`window.Datapath`), not ES modules.** The original runs without a server and
-  with no tooling; this keeps both true. Modules would force a local server and a rewrite of 1.4 MB of lesson data.
-- **No `pages/home.html`, `dashboard.html`, `about.html`, `assets/images/`, per-course `index.html` or `exercises.js`.**
-  The original has no dashboard or about page, uses no image files (all icons and charts are inline SVG), and
-  its home and module pages are generated by JavaScript. Its exercises live inside each lesson (practice, tiered practice,
-  interview questions, quiz). Splitting them out would break lessons apart, so they stay with their topic.
-  Folders and files can be added when real content exists.
-- **Excel and SQL are in separate folders with separate topic files**, and neither is mixed into the application code.
-
-## 6. Features found in the original and preserved
-
-Landing page; "Choose a module" page; module page with section lists; sidebar with expandable modules and sections
-and per-section completion counts; lesson search (title and tagline); lesson pages with a table of contents, previous/next,
-related and prerequisite links; spreadsheet-style tables with highlighted cells, SVG charts, Venn and flow diagrams, code blocks;
-reveal blocks (hint, solution, interview answers); five-question quizzes with shuffled options, per-answer feedback, score and retry;
-progress (top-bar count and bar, sidebar ticks) saved in `localStorage`; light/dark theme (saved, and follows the system by default);
-responsive layout with a mobile menu drawer; hash URLs and direct lesson links; "Coming soon" modules.
-There is no dashboard, login, or server feature in the original, and none was added.
-
-Browser storage keys are unchanged (`datapath_progress_v1`, `datapath_theme`), so existing progress carries over.
-
-## 7. Deploying later (not done)
-
-Nothing here touches Git or GitHub. When you are ready: push the folder to a repository, then
-**Settings > Pages > Deploy from a branch** and choose the root folder. All paths are relative, so the site works at
-`https://<user>.github.io/<repo>/`. `.nojekyll` is already included. Remove `dev-tools/` and `docs/` first if you prefer a lean repository.
+**Datapath — Learn. Practise. Analyse. Grow.**
