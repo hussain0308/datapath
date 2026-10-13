@@ -1,0 +1,9 @@
+{
+  "name": "datapath-dev-tools",
+  "private": true,
+  "description": "Optional checks that compare this project with the original single-file site. Not needed to run or deploy the website.",
+  "scripts": {
+    "verify": "node compare.js && node verbatim.js && node accounting.js && node cascade.js"
+  },
+  "dependencies": { "acorn": "^8.14.0", "jsdom": "^30.1.2", "postcss": "^8.5.0", "specificity": "^1.0.0" }
+}

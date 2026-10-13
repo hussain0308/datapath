@@ -1,0 +1,33 @@
+.site-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:18px}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.legal-header{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--surface);border-bottom:1px solid var(--line)}
+.legal-brand{font-family:var(--head-font);font-weight:700;font-size:21px;text-decoration:none;color:var(--ink)}
+.legal-main{width:min(760px,100%);margin:0 auto;padding:42px 24px 72px}
+.legal-main h1{margin-bottom:10px}
+.legal-main h2{margin-top:32px}
+.legal-main p,.legal-main li{max-width:72ch}
+.legal-updated{color:var(--muted);font-size:14px;margin-bottom:28px}
+.contact-main{width:min(880px,100%);padding-top:64px;padding-bottom:88px}
+.contact-intro{max-width:650px;margin-bottom:34px}
+.contact-kicker{display:inline-block;margin-bottom:12px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.14em}
+.contact-intro h1{max-width:12ch;font-size:clamp(36px,6vw,58px);margin-bottom:16px}
+.contact-intro .lede{max-width:54ch}
+.contact-card{display:grid;grid-template-columns:64px minmax(0,1fr);gap:22px;align-items:start;padding:30px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,var(--surface),var(--accent-soft))}
+.contact-icon{display:grid;place-items:center;width:58px;height:58px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--accent)}
+.contact-icon svg{width:27px;height:27px}
+.contact-card-copy h2{margin:0 0 4px;padding:0;font-size:22px}
+.contact-card-copy>p{margin-bottom:14px;color:var(--muted)}
+.contact-email{display:block;width:fit-content;max-width:100%;margin-bottom:22px;font-size:clamp(17px,3.2vw,23px);font-weight:600;overflow-wrap:anywhere;text-decoration:none}
+.contact-email:hover{text-decoration:underline}
+.contact-button{display:inline-flex;align-items:center;gap:12px}
+.contact-note{display:grid;gap:4px;margin-top:18px;padding:16px 19px;border-left:3px solid var(--accent);border-radius:0 9px 9px 0;background:var(--surface);color:var(--muted);font-size:14px}
+.contact-note strong{color:var(--ink);font-size:15px}
+@media(max-width:560px){
+  .site-footer{align-items:flex-start;flex-direction:column;padding:18px}
+  .legal-header{padding:12px 18px}
+  .legal-main{padding:30px 18px 56px}
+  .contact-main{padding-top:42px;padding-bottom:60px}
+  .contact-card{grid-template-columns:1fr;gap:16px;padding:22px}
+}

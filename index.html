@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Datapath | Learn data analytics one concept at a time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/interview.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open lesson menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="#/" aria-label="Datapath home">
+    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="9.5" height="9.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="13" y="1.5" width="9.5" height="9.5" rx="2" fill="var(--accent)"/>
+      <rect x="1.5" y="13" width="9.5" height="9.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="13" y="13" width="9.5" height="9.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </svg>
+    Datapath
+  </a>
+  <a class="btn ghost homebtn" href="#/">&larr; Home</a>
+  <a class="btn ghost modbtn" href="#/learn">&larr; Modules</a>
+  <div class="spacer"></div>
+  <div class="progress" aria-live="polite"><span id="progText">0 of 7 lessons</span><div class="bar"><i id="progBar"></i></div></div>
+  <a class="btn topcta" href="#/learn">Start learning</a>
+  <button class="icon-btn" id="themeBtn" aria-label="Switch light or dark theme" title="Switch theme">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="Lessons"></aside>
+  <main class="main" id="main"><div class="content" id="view"></div></main>
+</div>
+<div class="scrim" id="scrim"></div>
+<footer class="site-footer">
+  <span>&copy; <span id="footerYear">2026</span> Datapath</span>
+  <nav aria-label="Site information">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</footer>
+
+
+<!-- 1. Core: namespace and content builders (load first) -->
+<script src="assets/js/datapath.js"></script>
+<script src="assets/js/builders.js"></script>
+
+<!-- 2. Course content. ORDER MATTERS: each course folder registers itself, and the sidebar follows this order.
+     Inside a folder: manifest (lessons.js) first, then datasets, then the topic files. -->
+<!-- Analytics foundations -->
+<script src="courses/foundations/lessons.js"></script>
+<script src="courses/foundations/content.js"></script>
+<!-- Excel -->
+<script src="courses/excel/lessons.js"></script>
+<script src="courses/excel/datasets.js"></script>
+<script src="courses/excel/basics.js"></script>
+<script src="courses/excel/math-ranking.js"></script>
+<script src="courses/excel/logical-functions.js"></script>
+<script src="courses/excel/lookup-functions.js"></script>
+<script src="courses/excel/conditional-math.js"></script>
+<script src="courses/excel/text-functions.js"></script>
+<script src="courses/excel/date-functions.js"></script>
+<script src="courses/excel/dynamic-arrays.js"></script>
+<script src="courses/excel/data-cleaning.js"></script>
+<script src="courses/excel/tables-names.js"></script>
+<script src="courses/excel/pivot-tables.js"></script>
+<script src="courses/excel/charts-dashboards.js"></script>
+<script src="courses/excel/power-query-macros.js"></script>
+<!-- SQL -->
+<script src="courses/sql/lessons.js"></script>
+<script src="courses/sql/datasets.js"></script>
+<script src="courses/sql/foundations.js"></script>
+<script src="courses/sql/select-queries.js"></script>
+<script src="courses/sql/filtering-sorting.js"></script>
+<script src="courses/sql/aggregation.js"></script>
+<script src="courses/sql/string-functions.js"></script>
+<script src="courses/sql/numeric-functions.js"></script>
+<script src="courses/sql/date-functions.js"></script>
+<script src="courses/sql/null-case-cast.js"></script>
+<script src="courses/sql/joins.js"></script>
+<script src="courses/sql/set-operations.js"></script>
+<script src="courses/sql/subqueries.js"></script>
+<script src="courses/sql/ctes.js"></script>
+<script src="courses/sql/window-functions.js"></script>
+<script src="courses/sql/creating-changing-data.js"></script>
+<script src="courses/sql/design-performance.js"></script>
+<script src="courses/sql/interview-patterns.js"></script>
+<!-- Python and Pandas (coming soon) -->
+<script src="courses/python/lessons.js"></script>
+<!-- Power BI -->
+<script src="courses/power-bi/lessons.js"></script>
+<!-- Statistics for analysts -->
+<script src="courses/statistics/lessons.js"></script>
+<!-- Cleaning, EDA and case studies -->
+<script src="courses/case-studies/lessons.js"></script>
+<script src="courses/case-studies/content.js"></script>
+<!-- Interview hub and mock tests -->
+<script src="courses/interview-preparation/lessons.js"></script>
+<script src="courses/interview-preparation/questions.js"></script>
+<script src="courses/interview-preparation/tool-questions.js"></script>
+<script src="courses/interview-preparation/analyst-questions.js"></script>
+<script src="courses/interview-preparation/career-questions.js"></script>
+<script src="courses/interview-preparation/scenario-questions.js"></script>
+<script src="courses/interview-preparation/expanded-technical-questions.js"></script>
+<script src="courses/interview-preparation/additional-core-questions.js"></script>
+<script src="courses/interview-preparation/expanded-career-questions.js"></script>
+<script src="courses/interview-preparation/expanded-scenarios.js"></script>
+
+<!-- 3. Application code (does not contain any lesson content) -->
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/progress.js"></script>
+<script src="assets/js/curriculum.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/visuals.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/pages/modules.js"></script>
+<script src="assets/js/pages/landing.js"></script>
+<script src="assets/js/lesson.js"></script>
+<script src="assets/js/quiz.js"></script>
+<script src="assets/js/interview.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
