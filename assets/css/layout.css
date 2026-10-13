@@ -56,8 +56,23 @@ body.nosidebar .content{max-width:1040px;margin:0 auto}
   body.landing .main{padding:22px 18px 70px}
   .menu-btn{display:inline-flex}
   .shell{grid-template-columns:minmax(0,1fr)}
-  .sidebar{position:fixed;z-index:40;top:calc(env(safe-area-inset-top,0px) + 61px);left:0;bottom:0;width:min(320px,86%);max-height:none;
-    transform:translateX(-102%);transition:transform .2s;padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+  .sidebar {
+    position: fixed;
+    z-index: 40;
+    top: calc(env(safe-area-inset-top, 0px) + 61px);
+    left: 0;
+    bottom: 0;
+    width: min(320px, 86%);
+    max-height: calc(100vh - 61px - env(safe-area-inset-top, 0px));
+    max-height: calc(100dvh - 61px - env(safe-area-inset-top, 0px));
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(-102%);
+    transition: transform .2s;
+    padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  }
+  
   body.drawer .sidebar{transform:none}
   body.drawer .scrim{display:block;position:fixed;inset:0;z-index:35;background:rgba(0,0,0,.4)}
   .main{padding:26px 18px 70px}
