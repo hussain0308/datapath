@@ -1,166 +1,96 @@
-# Datapath — Data Analytics Learning Platform
+# Datapath
 
-**Learn data analytics one concept at a time.**
+### Learn. Practise. Analyse. Grow.
 
-Datapath is a free, interactive learning platform designed to help aspiring data analysts learn practical concepts, practise technical skills, and prepare for interviews.
+**Datapath is a data analytics learning platform designed to help aspiring data analysts build practical skills, strengthen their analytical thinking, and prepare for technical interviews.**
 
-The platform uses plain HTML, CSS, and JavaScript, with individual course files that make it easy to maintain existing lessons and add new learning content.
+The platform brings learning resources, practical examples, exercises, and interview preparation together in one place, allowing learners to study concepts step by step and practise applying them to real-world problems.
 
-## ✨ Features
+## About Datapath
 
-- **Excel:** Formulas, lookup functions, data cleaning, pivot tables, charts, and dashboards.
-- **SQL:** Queries, filtering, joins, aggregations, subqueries, CTEs, window functions, and more.
-- **Python:** Learn data analysis concepts and practise with examples.
-- **Power BI:** Explore business intelligence and reporting concepts.
-- **Statistics and Data Analysis:** Build an understanding of analytical concepts and practical problem-solving.
-- **Case Studies:** Practise applying analytical skills to business problems.
-- **Interview Preparation:** Technical questions, scenario-based questions, interview answers, and interactive mock tests.
-- **Interactive Learning:** Examples, practice exercises, quizzes, answer feedback, and lesson navigation.
-- **Progress Tracking:** Save lesson completion and quiz scores in your browser.
-- **Light and Dark Themes:** Switch between themes to suit your preference.
-- **Responsive Design:** Use the platform on desktop and mobile devices.
+Learning data analytics requires more than understanding individual tools. It involves working with data, identifying patterns, solving problems, communicating insights, and making informed decisions.
 
-Excel and SQL contain 178 lessons combined. Other modules contain learning content that can be expanded as development continues.
+Datapath is designed around this learning journey, with organized course modules, interactive lessons, practical exercises, knowledge checks, and scenario-based interview preparation.
 
-## 🚀 Getting Started
+## Learning Modules
 
-Datapath is a static website. It does not require a backend, database, framework, or build process.
+**Excel**
 
-### Option 1: Run with VS Code
+Learn spreadsheet functions, logical and conditional formulas, lookup functions, data cleaning, date and text functions, pivot tables, charts, dashboards, and reporting techniques.
 
-1. Download or clone this repository.
-2. Open the `datapath` folder in Visual Studio Code.
-3. Install the **Live Server** extension by Ritwick Dey if it is not already installed.
-4. Right-click `index.html`.
-5. Select **Open with Live Server**.
+**SQL**
 
-Your browser will open the website on a local development address.
+Practise querying databases, filtering and sorting data, aggregating results, joining tables, working with subqueries and CTEs, using window functions, and writing analytical queries.
 
-### Option 2: Run with Python
+**Python**
 
-Open a terminal in the project root and run:
+Explore Python concepts relevant to data analysis, with an emphasis on understanding code and applying programming techniques to analytical tasks.
 
-```bash
-python -m http.server 8000
-```
+**Power BI**
 
-Then open:
+Develop knowledge of business intelligence, reporting, dashboards, and the concepts used to turn data into meaningful business insights.
 
-<http://localhost:8000>
+**Statistics and Data Analysis**
 
-If `python` is not recognized, try `python3 -m http.server 8000` where supported.
+Build an understanding of statistical concepts, analytical thinking, data exploration, and interpreting results.
 
-## 📁 Project Structure
+**Case Studies**
 
-```text
-datapath/
-├── index.html
-├── about.html
-├── contact.html
-├── privacy.html
-├── README.md
-├── .nojekyll
-│
-├── assets/
-│   ├── css/
-│   └── js/
-│       └── pages/
-│
-├── courses/
-│   ├── excel/
-│   ├── sql/
-│   ├── python/
-│   ├── power-bi/
-│   ├── statistics/
-│   ├── foundations/
-│   ├── case-studies/
-│   └── interview-preparation/
-│
-├── docs/
-└── dev-tools/
-```
+Explore analytical problems that connect technical knowledge with business questions, data interpretation, and practical decision-making.
 
-### What the main folders contain
+## Interview Preparation
 
-| Path | Purpose |
-|---|---|
-| `index.html` | Main website entry point and script loading |
-| `assets/css/` | Website styles, layout, and components |
-| `assets/js/` | Application logic, navigation, quizzes, progress, and theme settings |
-| `assets/js/pages/` | JavaScript that renders landing and module pages |
-| `courses/` | Course manifests, lesson content, examples, and exercises |
-| `docs/` | Project documentation |
-| `dev-tools/` | Optional scripts for development and content checks |
+Datapath includes dedicated interview preparation for aspiring data analysts, covering:
 
-## 📚 Adding and Updating Lessons
+- **Technical questions:** Excel, SQL, Python, and Power BI.
+- **Data analysis and statistics:** Core concepts and analytical reasoning.
+- **Scenario-based questions:** Business problems that require structured analysis and clear explanations.
+- **Projects and resume:** Discussing project work, explaining decisions, and presenting relevant skills.
+- **HR and behavioral questions:** Communicating experience, motivation, and problem-solving approaches.
+- **Interactive mock tests:** Practising knowledge and checking understanding.
 
-Course content is organized into separate files to make future development easier.
+The aim is to help learners understand not only what a concept means, but also how to explain it and when to apply it.
 
-### Add a lesson to an existing topic
+## Learning Experience
 
-1. Open the appropriate course manifest, such as `courses/sql/lessons.js`.
-2. Add the new lesson ID to the correct section.
-3. Open the corresponding topic file, such as `courses/sql/joins.js`.
-4. Add the lesson content using the existing structure.
-5. Include examples, practice questions, answers, and quiz questions as appropriate.
-6. Run the website locally and verify that the lesson appears correctly.
+Datapath brings together several features to support independent learning:
 
-Keep lesson IDs unique and ensure the manifest ID matches the ID used in the lesson content.
+- **Structured lessons** organized by course and topic.
+- **Practical examples** that demonstrate how concepts work.
+- **Practice exercises** to reinforce understanding.
+- **Interactive quizzes** with answer feedback and retry options.
+- **Lesson navigation** to move between topics and related concepts.
+- **Learning progress tracking** to keep track of completed lessons and quiz scores.
+- **Light and dark themes** for a more comfortable reading experience.
+- **Responsive interface** for learning across desktop and mobile screens.
 
-### Add a new topic
+Lesson progress and theme preferences are stored locally in the learner's browser.
 
-1. Create the new topic file inside the appropriate course folder.
-2. Follow the existing lesson structure.
-3. Add a script reference to `index.html` in the correct loading order.
-4. Test the new topic and check the browser console for errors.
+## Our Approach
 
-For more detailed development instructions, see the documentation in `docs/` and the existing course files.
+Datapath focuses on learning one concept at a time, building from foundational knowledge toward practical application.
 
-## 🌐 Deployment
+The learning experience emphasizes:
 
-Datapath can be hosted on **GitHub Pages** without a paid hosting service.
+1. Understanding the concept.
+2. Seeing how it works through examples.
+3. Practising independently.
+4. Checking understanding through questions and exercises.
+5. Applying knowledge to analytical and interview scenarios.
 
-To publish the website:
+## Who Is Datapath For?
 
-1. Push the project files to a GitHub repository.
-2. Open the repository's **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Choose the `main` branch and `/(root)` folder.
-5. Click **Save** and wait for deployment to finish.
+Datapath is intended for aspiring data analysts, students, recent graduates, career starters, and learners who want to strengthen their skills in data analytics and reporting.
 
-For a repository named `datapath`, the published address follows this format:
+Whether someone is building foundational knowledge or revising for an interview, the platform provides an organized place to learn and practise.
 
-`https://hussain0308.github.io/datapath/`
+## Technology
 
-The address becomes available after GitHub Pages successfully deploys the site.
+Datapath is built with HTML, CSS, and JavaScript. Its lightweight, static architecture supports interactive learning without requiring user accounts or a dedicated application backend for its current features.
 
-## 🔒 Privacy and Storage
+## Vision
 
-Datapath does not require visitor accounts or a backend for its current functionality.
-
-- Lesson progress and theme preferences are stored in the visitor's browser.
-- Browser storage may be cleared by the visitor or by their browser settings.
-- The website loads fonts from Google Fonts.
-- Any future analytics, advertising, or third-party integrations should be documented according to their actual data collection and cookie practices.
-
-Read the [Privacy Policy](privacy.html) for further information.
-
-## 🛠️ Technology Stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Browser `localStorage`
-- Git and GitHub
-- GitHub Pages
-
-No JavaScript framework, application server, or build step is required for the current website.
-
-## 🎯 Project Goal
-
-The goal of Datapath is to provide an accessible place for aspiring data analysts to learn concepts, practise with examples, improve problem-solving skills, and prepare for data analytics interviews.
-
-The platform is being developed incrementally, with course content and features added as they are completed.
+Our vision is to make data analytics learning more organized, practical, and accessible by bringing technical concepts, hands-on practice, and interview preparation into a single learning experience.
 
 ---
 
