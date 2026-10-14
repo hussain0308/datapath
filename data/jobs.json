@@ -3,6 +3,28 @@
   "updatedAt": "2026-10-14",
   "jobs": [
     {
+      "title": "Analyst-Data Analytics (Agentic)",
+      "company": "American Express",
+      "location": "Gurugram, HR, India",
+      "workMode": "Hybrid",
+      "type": "job",
+      "eligibility": "Bachelor's Degree",
+      "skills": [
+        "Develop hands-on Generative AI and Data Science solutions to solve complex and unstructured business problems across GCS. Design",
+        "build and experiment with LLM-powered solutions using techniques such as prompt engineering",
+        "Retrieval-Augmented Generation (RAG)",
+        "embeddings",
+        "semantic search and vector-based retrieval. Develop and experiment with agentic AI workflows that can reason over context",
+        "leverage relevant data and tools",
+        "and support analytical and business decision-making. Develop and apply"
+      ],
+      "applyUrl": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26015040?utm_medium=jobboard&utm_source=LinkedIn&utm_referrer=sp_auto_dm",
+      "description": "The Analytics, Investment Optimization and Marketing Enablement (AIM) team – a part of Global Commercial Services Marketing group within American Express – is the analytical engine that enables the Global Commercial Card & Non-Card business. The team enables profitable business growth through data, analytics, decision science and AI-powered capabilities, providing actionable insights and innovative solutions to drive business and marketing strategy.\n\nThis role, based out of Gurugram, will be a part of the AIM team and will focus on developing and applying advanced Data Science and Generative AI solutions across Global Commercial Services. The incumbent will work on high-impact business problems spanning customer acquisition, engagement, targeting and personalization, product and portfolio analytics, marketing measurement and analytical productivity.\n\nThe role will focus on applying Generative AI to business and analytical problems and translating opportunities into hands-on solutions and prototypes. The incumbent will apply Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), prompt engineering, agentic AI and other emerging AI techniques alongside traditional Data Science and Machine Learning approaches.\n\nThe position is part of a highly collaborative environment, working with partners across AIM, GCS Marketing, Product, Capabilities, Technology and other teams at American Express.",
+      "id": "job-mv86jvdv-3231s",
+      "slug": "analyst-data-analytics-agentic-american-express",
+      "active": true
+    },
+    {
       "title": "Cognizant fresher hiring for Digital Workplace Practice (Service Desk) Role (Three-year full-time degree: 2025 and 2026 graduates)",
       "company": "Cognizant",
       "location": "PAN India",
