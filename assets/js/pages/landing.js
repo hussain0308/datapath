@@ -42,7 +42,7 @@ function renderLanding(){
   <div>
     <h1>Learn data analytics one concept at a time</h1>
     <p class='lede'>Short bullet lessons on Excel, SQL, Python and Power BI. Every topic comes with a real example, a practice question, interview questions and a quick quiz.</p>
-    <div class='cta-row'><a class='btn big' href='#/learn'>Start learning</a><button class='btn ghost big' data-scroll='outcomes'>See what you will learn</button></div>
+    <div class='cta-row'><a class='btn big' href='#/learn'>Start learning</a><button class='btn ghost big' data-scroll='outcomes'>See what you will learn</button><a class='btn ghost big' href='jobs/'>Jobs &amp; Internships</a></div>
     <p class='fine'>Free to use. No login. Progress is saved in your browser.</p>
   </div>
   <div class='demo'>
